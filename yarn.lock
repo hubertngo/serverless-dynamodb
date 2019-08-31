@@ -337,10 +337,10 @@ debug@^4.1.0:
   dependencies:
     ms "^2.1.1"
 
-dynamodb-localhost@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/dynamodb-localhost/-/dynamodb-localhost-0.0.5.tgz#2dfcd5c0ac83e534327f5d5da5dada8d31310755"
-  integrity sha1-LfzVwKyD5TQyf11dpdrajTExB1U=
+dynamodb-localhost@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/dynamodb-localhost/-/dynamodb-localhost-0.0.6.tgz#0ce83e82caeb04a18246c5d87ce2d23af931b6cf"
+  integrity sha512-llcERy9ebmjEXy5MlDmLf5DYYxlP72TVQD7zStix5psrZd+Cct9bHz/T6bwZezDOzX9ndizPWAvKcC57hPzCAw==
   dependencies:
     mkdirp "^0.5.0"
     progress "^1.1.8"
@@ -915,14 +915,14 @@ semver@^5.4.1, semver@^5.6.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
 
-serverless-dynamodb-local@0.2.25:
-  version "0.2.25"
-  resolved "https://registry.yarnpkg.com/serverless-dynamodb-local/-/serverless-dynamodb-local-0.2.25.tgz#19764c1043353b3832505bafca481cb67387933d"
-  integrity sha1-GXZMEEM1OzgyUFuvykgctnOHkz0=
+serverless-dynamodb-local@0.2.35:
+  version "0.2.35"
+  resolved "https://registry.yarnpkg.com/serverless-dynamodb-local/-/serverless-dynamodb-local-0.2.35.tgz#abc8000a8b39ce06fd5a8bdf560278ef93fc68d4"
+  integrity sha512-uK9WeNOU8CpOXiET/ZGDbAfIHxMzlf4MB3linnU8bhBZ00PY9qeirCVZkPPIPFhQN3ucGd7uKJsgch9vgq0dJQ==
   dependencies:
     aws-sdk "^2.7.0"
     bluebird "^3.4.6"
-    dynamodb-localhost "^0.0.5"
+    dynamodb-localhost "^0.0.6"
     lodash "^4.17.0"
 
 serverless-offline@^3.8.3:

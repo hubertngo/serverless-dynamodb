@@ -6,6 +6,8 @@
     "author": "Christoph Gysin <christoph.gysin@gmail.com>",
     "license": "MIT",
     "dependencies": {
+        "dotenv": "^8.1.0",
+        "dynamoose": "^1.11.0",
         "uuid": "^2.0.3"
     },
     "scripts": {
@@ -13,7 +15,6 @@
     },
     "devDependencies": {
         "aws-sdk": "^2.12.0",
-        "serverless-dynamodb-local": "0.2.35",
-        "serverless-offline": "^3.8.3"
+        "serverless-offline": "^5.10.1"
     }
 }

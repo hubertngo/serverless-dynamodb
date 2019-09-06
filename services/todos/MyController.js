@@ -34,13 +34,31 @@ module.exports.getAll = (event, context, callback, Model) => {
     var conditions = filter.conditions || {};
     var order = filter.order || { createdAt: -1 };
     var limit = filter.limit || 12;
-    var startAt = filter.startAt || '';
-
+    let lastKey = null;
+    if (filter.lastKey) {
+        lastKey = {
+            "id": {
+                "S": filter.lastKey,
+            }
+        }
+    }
     Model
-        .scan(conditions)
-        .limit(limit)
-        .exec((err, res) => {
-            callback(err, res);
+        .scan()
+        .count()
+        .exec((err, totalRecords) => {
+            if (err) return callback(err);
+            Model
+                .scan(conditions)
+                .limit(limit)
+                .startAt(lastKey)
+                .exec((err, res) => {
+                    callback(err, {
+                        data: res,
+                        limit,
+                        total: totalRecords[0],
+                        lastKey: res.lastKey["id"]["S"],
+                    });
+                });
         });
 
     // const filter = event.query.filter ? (utils.safeParseJSON(event.query.filter) || {}) : {};
